@@ -80,12 +80,15 @@ haremos una prueba eliminando un archivo que ya esta en el repo
     deleted:    hola_mundo.txt
 nos indica que hay cambios importantes en un archivo (deleted), si de verdad queremos que se eliminar entonces agregamos la eliminacion con el add y commit.
 - git restore archivo (en caso de que lo hayamos eliminado y estan en el stagging area si ya lo pusiste enviaste al repo entonces volve en el tiempo)
-![alt text](image.png)\n
+
+![alt text](image.png)
+
 - git checkout archivo (lo que hace es restaurar la ultima version del commit - en el caso de que este en el stagging area, no se cambia)
 - git reset --hard (en el caso de que ya lo pusiste en el stagging area, puedes deshacer los cambios con este comando. borra lo del stagging area - hay que tener cuidado con esto)
 
 ## como cambiar el nombre dle archivo
 git mv archivo nuevo_nombre_archivo
-![alt text](image-1.png)
-\n
+
+![alt text](image-1.png) 
+
 si cambiamos de nombre desde el ordenador, el git no lo reconoce, por ende, creera que se elimino. cuando hacemos un checkout lo "restaura" (en realidad como que crea otro, el archivo con nombre diferente sigue ahi y es como si fuera un nuevo archivo)

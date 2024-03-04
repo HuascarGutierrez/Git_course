@@ -37,14 +37,14 @@ AREAS
 - Stagging area (donde subimos los cambios que posteriormente enviaremos al repositorio)
 - repositorio
 
-comandos de linux
+## comandos de linux
 - mkdir (crear carpeta)
 - rmdir (eliminar carpeta)
 - ls (lista)
 - ls -a (lista con los elementos oculto)
 - pwd (muestra la dirrecion o path)
 
-comandos de git (aparte de la configuracion inicial)
+## comandos de git iniciales(aparte de la configuracion inicial)
 - git add archivo (si quieres cargar todos los archivos, entonces pones .) (lo envias al stagging area) (si quieren agregar mas de un archivo solamente le dan espacio al primero y continuan con le siguiente ej. git add archivo1.txt archivo2.txt)
 - git status (muestra la rama y los commits - informacion del area de trabajo y la preparacion)
 - git rm --cached archivo (lo quita del changes to be committed) (puedes hacer lo mismo que el add para eliminar varios archivos)
@@ -63,10 +63,28 @@ te sale algo asi, cuando es commit en el editor que haya puesto (en =mi caso vis
 
 - git commit -m "message" -a (el -a es opcional, se cra un commit, lo cual esta en el repositorio)
 - git commit -a (hace un salto directo del area de trabajo al repo)
-ejemplo en el repo git_ejemplo
+
+## ejemplo en el repo git_ejemplo 
 
 la rama MASTER esta como estandar
 
 Existen dos tipos de archivos para los commits
 - untracked files (archivos que no se cargartan al stagging area)
 - changes to be commited (archivos que si se cargaran al stagging area)
+
+## git restore chekout y mas
+haremos una prueba eliminando un archivo que ya esta en el repo
+    Changes not staged for commit:
+    (use "git add/rm <file>..." to update what will be committed)
+    (use "git restore <file>..." to discard changes in working directory)
+    deleted:    hola_mundo.txt
+nos indica que hay cambios importantes en un archivo (deleted), si de verdad queremos que se eliminar entonces agregamos la eliminacion con el add y commit.
+- git restore archivo (en caso de que lo hayamos eliminado y estan en el stagging area si ya lo pusiste enviaste al repo entonces volve en el tiempo)
+![alt text](image.png)
+- git checkout archivo (lo que hace es restaurar la ultima version del commit - en el caso de que este en el stagging area, no se cambia)
+- git reset --hard (en el caso de que ya lo pusiste en el stagging area, puedes deshacer los cambios con este comando. borra lo del stagging area - hay que tener cuidado con esto)
+
+## como cambiar el nombre dle archivo
+git mv archivo nuevo_nombre_archivo
+![alt text](image-1.png)
+si cambiamos de nombre desde el ordenador, el git no lo reconoce, por ende, creera que se elimino. cuando hacemos un checkout lo "restaura" (en realidad como que crea otro, el archivo con nombre diferente sigue ahi y es como si fuera un nuevo archivo)

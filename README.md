@@ -105,3 +105,41 @@ el M en verde = modificado en el stagging area
 ![alt text](image-3.png)
 
 el A verde = se agrego un archivo en el stagging area
+
+nota: si borramos el archivo .git, se borra el repositorio, tomar en cuenta.
+
+## git show
+git show archivo (muestra el contenido del archivo en la version del repositorio, es decir, del commiteado)
+
+![alt text](image-6.png)
+
+## git diff
+- git diff --staged (muestra la comparacion del contenido de lo que esta en el stagging area y el repo)
+
+![alt text](image-5.png)
+
+el rojo es el commiteado y el verde es el que esta en el stagging
+
+- git diff hash1 hash2
+
+![alt text](image-7.png)
+
+difieren en cuanto al orden en que se le ponen
+
+- git diff --name-only hash1 hash2 (muestra los nombres de los aechivos que cambiaron)
+
+![alt text](image-8.png)
+
+- git diff --word-diff (hace la comparacion entre hashes o commmits tomando en cuenta el contenido)
+
+![alt text](image-9.png)
+
+el primer has es el rojo y el segundo es el verde
+
+## git log
+- git log es registro de todos los commits que se realizan 
+- git log --oneline es una version corta de los commits
+
+normalmente con 7 caracteres ya lo puedes identificar, de esta forma no  tendras que poner todo el hash. pero si es un repo con demasiados commits y no quieres poner todo, entonces se sugiere este comando
+
+- git config --global core.abbrev cantidad_caracteres 

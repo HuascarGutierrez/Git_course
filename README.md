@@ -47,6 +47,7 @@ AREAS
 ## comandos de git iniciales(aparte de la configuracion inicial)
 - git add archivo (si quieres cargar todos los archivos, entonces pones .) (lo envias al stagging area) (si quieren agregar mas de un archivo solamente le dan espacio al primero y continuan con le siguiente ej. git add archivo1.txt archivo2.txt)
 - git status (muestra la rama y los commits - informacion del area de trabajo y la preparacion)
+- git status -s O git status --short (muestra una forma resumidad del status)
 - git rm --cached archivo (lo quita del changes to be committed) (puedes hacer lo mismo que el add para eliminar varios archivos)
 - git commit (hace lo mismo que el de abajo, solamente que con un mensaje largo)
     
@@ -92,3 +93,15 @@ git mv archivo nuevo_nombre_archivo
 ![alt text](image-1.png) 
 
 si cambiamos de nombre desde el ordenador, el git no lo reconoce, por ende, creera que se elimino. cuando hacemos un checkout lo "restaura" (en realidad como que crea otro, el archivo con nombre diferente sigue ahi y es como si fuera un nuevo archivo)
+
+## git status -s 
+
+![alt text](image-2.png)
+
+el M en rojo = modificado 
+el M en verde = modificado en el stagging area
+?? = archivo nuevo o extrano para el stagging area
+
+![alt text](image-3.png)
+
+el A verde = se agrego un archivo en el stagging area

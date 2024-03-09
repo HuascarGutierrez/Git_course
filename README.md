@@ -32,6 +32,7 @@ git config --global core.autocrlf true (soluciona los problemas de compatibilida
 
 ## REPOSITORIO
 el repositorio es el lugar donde guardamos todo y donde tenemos todo para poder administrarlo 
+
 AREAS
 - Area de trabajo
 - Stagging area (donde subimos los cambios que posteriormente enviaremos al repositorio)

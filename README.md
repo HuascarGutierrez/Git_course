@@ -61,6 +61,7 @@ AREAS
     #	modified:   hola_mundo.txt
     #
 */
+
 te sale algo asi, cuando es commit en el editor que haya puesto (en =mi caso visual code), puedes eliminarlo y poner el mensaje, no te olvidesa de guardar el mensaje
 
 - git commit -m "message" -a (el -a es opcional, se cra un commit, lo cual esta en el repositorio)
@@ -76,10 +77,10 @@ Existen dos tipos de archivos para los commits
 
 ## git restore chekout y mas
 haremos una prueba eliminando un archivo que ya esta en el repo
-    Changes not staged for commit:
-    (use "git add/rm <file>..." to update what will be committed)
-    (use "git restore <file>..." to discard changes in working directory)
-    deleted:    hola_mundo.txt
+    Changes not staged for commit:  
+    (use "git add/rm <file>..." to update what will be committed)  
+    (use "git restore <file>..." to discard changes in working directory)  
+    deleted:    hola_mundo.txt  
 nos indica que hay cambios importantes en un archivo (deleted), si de verdad queremos que se eliminar entonces agregamos la eliminacion con el add y commit.
 - git restore archivo (en caso de que lo hayamos eliminado y estan en el stagging area si ya lo pusiste enviaste al repo entonces volve en el tiempo)
 
